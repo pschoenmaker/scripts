@@ -1,0 +1,2 @@
+# Clean up createrepo directories in /var/tmp at 01:00 AM that are older than 3 days
+0 1  *  *  *  /usr/bin/find /var/tmp -name 'createrepo*' -type d -mtime +3 -exec rm -r "{}" \;
